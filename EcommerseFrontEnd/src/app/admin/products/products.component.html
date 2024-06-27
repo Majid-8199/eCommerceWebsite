@@ -1,0 +1,29 @@
+<section class="products">
+    <div class="category-container">
+        <h2>Add a New Product</h2>
+        <form class="category-form" #myform="ngForm" (ngSubmit)="addProduct()" >
+            <div class="image-preview" >
+                <img [src]="imagePreview" alt="Select Image" >
+            </div>
+            
+            <label class="img">Select Image</label>
+            <input type="file" (change)="onFileSelected($event)" required>
+
+            <label for="categoryid">Select Category</label>
+            <select id="categoryid" name="categoryid" ngModel required>
+                <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+            </select>
+
+            <label for="name">Product Name</label>
+            <input type="text" id="name" name="name" ngModel required>
+
+            <label for="price">Price</label>
+            <input type="number" id="price" name="price" ngModel required>
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4" ngModel required></textarea>
+
+            <button type="submit">Add Ptoduct</button>
+        </form>
+    </div>
+</section>

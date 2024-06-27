@@ -1,0 +1,49 @@
+.bottom{
+    background-color: rgb(51, 51, 51);
+    margin-top: 20px;
+    height: 650px;
+}
+tr,table{
+    height: 40px;
+    width: 100%;
+}
+td{
+    padding-left: 10px;
+}
+thead{
+    font-style: bold;
+    background-color: #ffa500;
+    color: white;
+    border: 2px solid #ffa500;
+
+}
+
+table,td,th{
+    color: white;
+    border: 2px solid #ffa500;
+    border-collapse: collapse;
+}
+button{
+    cursor: pointer;
+}
+.actionbuttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.updateid{
+    height: 25px;
+    width: 70px;
+    margin-right: 10px;
+    background-color: white;
+    border:none;
+    color: #ffa500;
+}
+.updateid:hover{
+    background-color: #ffa500;
+    color: white;
+}
+.updateid:active{
+    color: #ffa500;
+    background-color: white;
+}

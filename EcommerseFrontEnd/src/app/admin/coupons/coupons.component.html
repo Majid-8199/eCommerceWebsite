@@ -1,0 +1,22 @@
+<div class="bottom">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Coupon ID</th>
+                <th>Coupon Name</th>
+                <th>Coupon Code</th>
+                <th>Discount %</th>
+                <th>Expiration Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let coupon of coupons">
+                <td>{{coupon.id}}</td>
+                <td>{{coupon.name}}</td>
+                <td>{{coupon.code}}</td>
+                <td>{{coupon.discount}}</td>
+                <td>{{coupon.expirationDate}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

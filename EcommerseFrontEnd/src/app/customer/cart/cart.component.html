@@ -1,0 +1,40 @@
+<div class="container" *ngIf="cartItems.length>0">
+    <div class="shopping-cart">
+        <h1>Shopping Cart</h1>
+        <div class="cart-items" >
+            <div class="cart-item"  *ngFor="let order of cartItems">
+                <img [src]="order.decodedImg" alt="Product1">
+                <div class="item-details">
+                    <h2>{{order.productName}}</h2>
+                    <p>{{order.productDescription}}</p>
+                </div>
+                <div class="quantity">
+                    <button class="minus" [disabled]="order.quantity==1" (click)="decreaseQuantity(order.productId)">-</button>
+                    <input type="text" value={{order.quantity}}>
+                    <button class="plus" (click)="increaseQuantity(order.productId)">+</button>
+                </div>
+                <div class="price">Rs. {{order.price}}</div>
+                <button class="remove">x</button>
+            </div>
+        </div>
+        <a href="/customer/dashboard" class="back-to-shop">← Back to shop</a>
+    </div>
+    <div class="summary" >
+        <div class="box" >
+            <h2>Summary</h2>
+        <div class="summary-item"><span>ITEMS {{getTotalQuantity()}}</span><span>Rs. {{orders.amount}}</span></div>
+        <form class="checkout" #myform="ngForm" (submit)="applyCoupon()">
+            <div class="summary-item"><span>SHIPPING</span>
+                <select id="delivery" name="delivery">
+                    <option value=50>Standard-Delivery: Rs. 50.00</option>
+                    <option value=100>Speed-Delivery: Rs. 100.00</option>
+                </select>
+            </div>
+            <div class="summary-item"><label for="code">Coupon Code</label><input type="text" placeholder="Enter your code" id="code" name="code" [(ngModel)]="code" [disabled]="couponApplied"></div>
+            <button class="register" type="submit" >Apply Coupon</button>
+        </form>
+        <div class="total-price"><span>TOTAL PRICE</span><span>Rs. {{orders.totalAmount}}</span></div>
+        <button class="register" (click)="placeOrder()">Check Out</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+.container {
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+.profile-pic{
+    width: 150px;
+    height: 150px;
+    border: 2px solid #ffa500;
+    margin-right: 20px;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.profile-info{
+    background-color: #ffa500;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 18px;
+    color: white;
+    border-radius: 4px;
+}
+
+.other{
+    background-color: #ffa500;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding-left: 70px;
+    padding-right: 120px;
+    border-radius: 4px;
+}
+
+.other li{
+    list-style: none;
+}
+
+.other a{
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+}

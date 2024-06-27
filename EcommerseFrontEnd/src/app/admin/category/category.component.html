@@ -1,0 +1,14 @@
+<section class="category">
+    <div class="category-container">
+        <h2>Add a New Category</h2>
+        <form class="category-form" #myform="ngForm" (submit)="addCategory(myform.value)">
+            <label for="name">Category Name:</label>
+            <input type="text" id="name" name="name" ngModel required>
+    
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" ngModel required></textarea>
+    
+            <button type="submit">Add Category</button>
+        </form>
+    </div>
+</section>

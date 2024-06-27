@@ -1,0 +1,20 @@
+<section class="products">
+    <div class="category-container">
+        <h2>Add Coupon</h2>
+        <form class="category-form" #myform="ngForm" (submit)="addCoupon(myform.value)">
+            <label for="name">Coupon Name:</label>
+            <input type="text" id="name" name="name" ngModel required>
+
+            <label for="code">Coupon Code:</label>
+            <input type="text" id="code" name="code" ngModel required>
+
+            <label for="discount">DiscountS%:</label>
+            <input type="number" id="discount" name="discount" max="100" ngModel required>
+
+            <label for="expirationDate">Expiration Date:</label>
+            <input type="date" id="expirationDate" name="expirationDate" ngModel required>
+
+            <button type="submit">Add Coupon</button>
+        </form>
+    </div>
+</section>

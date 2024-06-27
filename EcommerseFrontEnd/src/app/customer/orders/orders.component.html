@@ -1,0 +1,28 @@
+<div class="bottom">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Tracking Id</th>
+                <th>User Name</th>
+                <th>Amount</th>
+                <th>Description</th>
+                <th>Payment</th>
+                <th>Address</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orders">
+                <td>{{order.trackingId}}</td>
+                <td>{{order.userName}}</td>
+                <td>{{order.totalAmount}}</td>
+                <td>{{order.description}}</td>
+                <td>{{order.payment}}</td>
+                <td>{{order.address}}</td>
+                <td>{{order.date}}</td>
+                <td>{{order.orderStatus}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
